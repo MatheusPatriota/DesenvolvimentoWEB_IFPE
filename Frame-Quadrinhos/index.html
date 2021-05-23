@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mangás</title>
+</head>
+
+<body style="text-align: center;">
+
+    <table border="3px" style="width: 100%;">
+        <th>
+            <h1>Mangás</h1>
+        </th>
+        <tr>
+            <td>
+                <p id="data" style="font-size: 30px;text-align: right; margin-right: 15px;"></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+
+                <iframe width="100%" height="1200px" name="tela-quadrinhos" src="images/tela-quadrinhos.svg"
+                    frameborder="0"></iframe>
+            </td>
+        </tr>
+    </table>
+
+</body>
+
+<!-- Codigo JavaScript para gerar a data atual -->
+<script language=javascript type="text/javascript">
+    dayName = new Array("domingo", "segunda", "terça", "quarta", "quinta", "sexta", "sábado")
+    monName = new Array("janeiro", "fevereiro", "março", "abril", "maio", "junho", "agosto", "outubro", "novembro", "dezembro")
+    now = new Date
+    dataAtual = dayName[now.getDay()] + ", " + now.getDate() + " de " + monName[now.getMonth()] + " de " + now.getFullYear() + ". "
+    document.getElementById("data").textContent = dataAtual
+</script>
+
+</html>
